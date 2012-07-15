@@ -1,6 +1,11 @@
 
 var Stream = require('stream')
 
+/*
+  could probably refactor this into two seperate function that created 
+  the readable and writable sides.
+*/
+
 module.exports = function (readable, ended) {
 
   readable = readable || function () {
@@ -65,7 +70,6 @@ module.exports = function (readable, ended) {
       ended.call(this)
   }
   stream.drain = function (drain) {
-    console.log('DRAIN', outbuf.length, this.paused)
     while(!this.paused && outbuf.length)
       this.emit('data', outbuf.shift())
     if(this.readEnded && !this.paused)
