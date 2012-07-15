@@ -1,0 +1,22 @@
+{
+  "name": "dart-stream",
+  "version": "0.0.0",
+  "description": "A stream interface like the one in dart",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/dart-stream.git"
+  },
+  "keywords": [
+    "stream",
+    "experiment"
+  ],
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)",
+  "license": "BSD"
+}
