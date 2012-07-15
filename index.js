@@ -30,7 +30,6 @@ module.exports = function (readable, ended) {
   stream.on('ended', ended.bind(stream))
 
   stream.write = function (data) {
-    console.log('W')
     inbuf.unshift(data)    
     this.emit('readable')
     return !!inbuf.length
